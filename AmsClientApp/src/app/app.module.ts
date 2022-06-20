@@ -17,18 +17,16 @@ import { DatePipe } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Components/home/home.component';
-import { LoginComponent } from './Components/login/login.component';
-import { NavigationBarComponent } from './Components/navigation-bar/navigation-bar.component';
+import { LoginComponent } from './SharedModule/Components/login/login.component';
+import { NavigationBarComponent } from './SharedModule/Components/navigation-bar/navigation-bar.component';
 import { MaterialModule } from './material.module';
-import { ViewRequestsComponent } from './Components/view-requests/view-requests.component';
+import { ViewRequestsComponent } from './SharedModule/Components/view-requests/view-requests.component';
 import { ErrorDialogComponent } from './SharedModule/Components/error-dialog/error-dialog.component';
-import { EditRequestComponent } from './Components/edit-request/edit-request.component';
+import { EditRequestComponent } from './SharedModule/Components/edit-request/edit-request.component';
 import { ManagerComponent } from './Components/manager/manager.component';
-import { EmployeesComponent } from './SharedModule/Components/employees/employees.component';
-import { MessageDialogComponent } from './SharedModule/Components/message-dialog/message-dialog.component';
-import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './SharedModule/Components/page-not-found/page-not-found.component';
 import { DetailsComponent } from './Components/details/details.component';
-import { RejectedReasonComponent } from './Components/rejected-reason/rejected-reason.component';
+import { RejectedReasonComponent } from './SharedModule/Components/rejected-reason/rejected-reason.component';
 
 
 
@@ -42,8 +40,6 @@ import { RejectedReasonComponent } from './Components/rejected-reason/rejected-r
     ErrorDialogComponent,
     EditRequestComponent,
     ManagerComponent,
-    EmployeesComponent,
-    MessageDialogComponent,
     PageNotFoundComponent,
     DetailsComponent,
     RejectedReasonComponent

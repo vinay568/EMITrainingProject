@@ -15,8 +15,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { RequestsModel } from 'src/app/Models/requests.model';
 import { RequestService } from 'src/app/Services/request.service';
-import { MessageDialogComponent } from 'src/app/SharedModule/Components/message-dialog/message-dialog.component';
-import { RejectedReasonComponent } from '../rejected-reason/rejected-reason.component';
+import { RejectedReasonComponent } from '../../SharedModule/Components/rejected-reason/rejected-reason.component';
 
 @Component({
   selector: 'app-details',

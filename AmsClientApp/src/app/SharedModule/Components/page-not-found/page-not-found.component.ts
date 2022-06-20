@@ -5,13 +5,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-message-dialog',
-  templateUrl: './message-dialog.component.html',
-  styleUrls: ['./message-dialog.component.css'],
+  selector: 'app-page-not-found',
+  templateUrl: './page-not-found.component.html',
+  styleUrls: ['./page-not-found.component.css'],
 })
-export class MessageDialogComponent implements OnInit {
-  requestId : any;
-
+export class PageNotFoundComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {

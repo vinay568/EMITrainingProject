@@ -11,7 +11,7 @@ import { throwToolbarMixedModesError } from '@angular/material/toolbar';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { RequestService } from 'src/app/Services/request.service';
-import { ErrorDialogComponent } from '../../SharedModule/Components/error-dialog/error-dialog.component';
+import { ErrorDialogComponent } from '../error-dialog/error-dialog.component';
 import { RejectedReasonComponent } from '../rejected-reason/rejected-reason.component';
 
 @Component({

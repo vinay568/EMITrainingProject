@@ -3,13 +3,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DetailsComponent } from './Components/details/details.component';
-import { EditRequestComponent } from './Components/edit-request/edit-request.component';
+import { EditRequestComponent } from './SharedModule/Components/edit-request/edit-request.component';
 import { HomeComponent } from './Components/home/home.component';
 
-import { LoginComponent } from './Components/login/login.component';
+import { LoginComponent } from './SharedModule/Components/login/login.component';
 import { ManagerComponent } from './Components/manager/manager.component';
-import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
-import { ViewRequestsComponent } from './Components/view-requests/view-requests.component';
+import { PageNotFoundComponent } from './SharedModule/Components/page-not-found/page-not-found.component';
+import { ViewRequestsComponent } from './SharedModule/Components/view-requests/view-requests.component';
 
 const routes: Routes = [
 
