@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "df0ada70-2c90-451f-9101-911babdab1ae": {
+      "ProjectGuid": "df0ada70-2c90-451f-9101-911babdab1ae",
+      "DisplayName": "AmsApi",
+      "ColorIndex": 0
+    },
+    "3b2ca056-c716-41e7-8e6f-41a51398a1c5": {
+      "ProjectGuid": "3b2ca056-c716-41e7-8e6f-41a51398a1c5",
+      "DisplayName": "AmsApi.DataModel",
+      "ColorIndex": 1
+    },
+    "b93f75ba-1eb5-47b9-9f62-20e922d5aa3d": {
+      "ProjectGuid": "b93f75ba-1eb5-47b9-9f62-20e922d5aa3d",
+      "DisplayName": "AmsApi.ServiceModel",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 3
+}
