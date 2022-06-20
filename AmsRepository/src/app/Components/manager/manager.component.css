@@ -1,0 +1,36 @@
+
+.myRequests{
+    border-width: 10px;
+    padding-left: 90px;
+    background-color: bisque;
+    
+}
+
+.myRequests .card{
+    margin-top: 25%;
+    width: 360px;
+    height: 250px;
+    background-color: bisque;
+    border-color: rgba(0,0,0,0);
+    margin-bottom: 20%;
+    font-style: italic;
+    padding-bottom: 3%;
+    
+}
+.myRequests .card mat-card-subtitle{
+    font-style: italic;
+    color: crimson;
+}
+
+.myRequests mat-spinner{
+    margin-top: 20%;
+    margin-left: 40%;
+}
+
+.myRequests mat-card-actions{
+    padding-left: 20px;
+}
+
+.paginator{
+    padding-top: 5%;
+}

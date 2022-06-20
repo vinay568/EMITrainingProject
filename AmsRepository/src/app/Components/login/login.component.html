@@ -1,0 +1,68 @@
+<div class="login-body">
+  <div class="login-page centered" id="login-page" >
+    
+    <div class="col d-flex justify-content-center">
+        <mat-card>
+            <mat-card-title>
+                <div class="row ">
+                <div class="col-md-6">
+           
+                
+                    <img src="../assets/images/euromonitor1-logo.jfif" class="d-flex justify-content-center " 
+                    alt="euromonitor" width="40px" height="40px">
+                
+            
+                </div>
+                <div class="col-md-6">
+                    <h3 class="d-flex justify-content-end">EMI Budget</h3>
+                </div>
+            </div>
+            </mat-card-title>
+            <mat-card-content>
+                <form #requestLoginForm [formGroup]="loginForm"  autocomplete="off" (ngSubmit)="onSubmit(loginForm.value)">
+                    <div class="mb-3">
+                      <h2 class="d-flex justify-content-center">Welcome</h2>
+                      <label for="email" class="form-label">Email:</label>
+          
+                      <input [class.is-invalid]="loginForm.get('email').invalid && loginForm.get('email').touched"
+                      formControlName="email" type="text" 
+                      class="form-control" id="email" placeholder="Enter email" required="">
+                      
+                      <small [class.d-none]="loginForm.get('email').valid || loginForm.get('email').untouched" class="text-danger">
+                        Email required</small>
+
+                    </div>
+      
+                    <div class="mb-3">
+                      <label for="pwd" class="form-label">Password:</label>
+                      <input [class.is-invalid]="loginForm.get('password').invalid && loginForm.get('password').touched"
+                       formControlName="password" type="password" 
+                       class="form-control" id="pwd" placeholder="Enter password">
+
+                      <small [class.d-none]="loginForm.get('password').valid || loginForm.get('password').untouched" class="text-danger">
+                        Password required</small>
+      
+                    </div> 
+                     
+                    <div class="form-check mb-3">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Remember me
+                      </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary " [disabled]="!loginForm.valid" >Login</button>&nbsp;&nbsp;
+                    
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                    
+                    <div class="mt-4 justify-content-left">
+                      <div class="d-flex justify-content-center links">
+                                    <a href="#">Forgot your password?</a>
+                      </div>
+                    </div>
+                  </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+</div>
+<router-outlet></router-outlet>

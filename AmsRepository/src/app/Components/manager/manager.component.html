@@ -1,0 +1,52 @@
+<app-navigation-bar></app-navigation-bar>
+
+<div class="myRequests" >
+    
+        <form>
+            <mat-form-field>
+                <input matInput  type="text" [(ngModel)]="term" name="term" placeholder="Enter search key...">
+            </mat-form-field><mat-icon>search</mat-icon> 
+        </form>
+   
+  <div *ngIf="isDataLoaded==false">
+      <mat-spinner></mat-spinner>
+  </div>
+  
+    <div class="row" >
+        <div class="col-md-4" *ngFor="let data of requests | filter:term | paginate: { itemsPerPage: 3, currentPage: page }">
+            <div class="card">
+                
+                <mat-card>
+                    <mat-card-title style="height: 50px;">
+                        <h2> {{data.purpose}}</h2>
+                    </mat-card-title>
+                    <mat-card-subtitle style="height: 50px;">
+                        <strong>{{data.description}}</strong>
+                    </mat-card-subtitle>
+                    <mat-card-content >
+                        <strong>Details</strong><br>
+                        RequestId
+                        : {{data.id}}<br>
+                        Requester
+                        : {{requester}}<br>
+                        Estimated Cost
+                        : {{data.estimatedCost | currency : 'INR'}}<br>
+                        Advance Amount
+                        : {{data.advanceAmount | currency : 'INR'}}<br>
+                        Plan Date
+                        : {{data.planDate | date:'dd-MM-yyyy'}}
+                    </mat-card-content>
+                    <mat-card-footer>
+                        <mat-card-actions>
+                            <!-- <button mat-raised-button color="accent" *ngIf="data.estimatedCost >= 8000 && roleId != 1">Forward</button>&nbsp; -->
+                            <button mat-raised-button color="primary" (click)="details(data.id)">Details</button>
+                            <button mat-raised-button color="primary" >Download</button> 
+                        </mat-card-actions>   
+                    </mat-card-footer>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+    <pagination-controls (pageChange)="page = $event" class="paginator d-flex justify-content-center"></pagination-controls>
+</div>
+

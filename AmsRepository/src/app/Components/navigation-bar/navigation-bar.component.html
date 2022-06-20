@@ -1,0 +1,18 @@
+<mat-toolbar class="navbar position-fixed" color="primary">
+  <img src="../assets/images/euromonitor1-logo.jfif" alt="" width="60" height="30"
+    class="d-inline-block align-text-top ">
+  <span></span>
+  <span class="example-spacer"></span>
+  
+  <button mat-button routerLink="/makeRequest">Make Request <mat-icon>edit_note</mat-icon></button>
+  <button mat-button routerLink="/viewRequest">My Request</button>
+  <button mat-button *ngIf="roleId==1 || roleId==2 || roleId==3" routerLink="/employeeRequests">Employee Requests</button>
+  <button mat-button>Upload Bills</button>
+
+  <button mat-button [matMenuTriggerFor]="menu">Hi {{userName}}<mat-icon>account_circle</mat-icon></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>About</button>
+    <button mat-menu-item>Contact Us<mat-icon>contact_page</mat-icon></button>
+    <button mat-menu-item (click)="logout()">Logout<mat-icon>logout</mat-icon></button>
+  </mat-menu>
+</mat-toolbar>

@@ -1,0 +1,9 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.navbar{
+  max-width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}

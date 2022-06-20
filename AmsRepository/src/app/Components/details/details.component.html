@@ -1,0 +1,44 @@
+<div class="request-details">
+    <h1 class="col d-flex justify-content-center" style="background-color:aquamarine">Request Details</h1>
+    <section>
+        <form [formGroup]="requestDetailsForm">
+            <h2>REQ{{requestDetails.id}}</h2>
+            <div class="row"  >
+                <div class="col-md-6" >
+                    <mat-form-field>
+                        <input matInput formControlName="purpose" placeholder="Purpose" [readonly]="true">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput formControlName="advanceAmount" placeholder="Advance Amount" [readonly]="true">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field>
+                        <input matInput formControlName="estimatedCost" placeholder="Estimated Cost" [readonly]="true">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="date" formControlName="planDate" placeholder="Plan Date" [readonly]="true">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-12">
+                    
+                        <textarea  formControlName="description" placeholder="Description" style="width:100%;" [readonly]="true"></textarea>
+                   
+                </div>
+            </div>
+            <div >
+                <mat-dialog-actions class="col d-flex justify-content-center">
+                    <button mat-raised-button color="primary" *ngIf="(requestDetails.estimatedCost < 8000 || roleId ==1) && (requestDetails.status ==1)" (click)="approveRequest(requestDetails.id) "> Approve </button> &nbsp;&nbsp;
+                    <button mat-raised-button color="primary" *ngIf=" requestDetails.status == 2" > Approved </button> &nbsp;&nbsp;
+                    <button mat-raised-button color="warn" *ngIf="(requestDetails.estimatedCost < 8000 || roleId ==1) && (requestDetails.status ==1)" (click)="rejectRequest(requestDetails.id)"> Reject </button> &nbsp;&nbsp;
+                    <button mat-raised-button color="primary" *ngIf=" requestDetails.status == 3" (click)="viewRejectedReason(requestDetails.id)"> Rejected Reason </button> &nbsp;&nbsp;
+                    <button mat-raised-button color="accent" *ngIf="(requestDetails.estimatedCost >= 8000 && roleId != 1) && (requestDetails.status ==1)" (click)="forwardRequest(requestDetails.id)"> Forward </button> &nbsp;&nbsp;
+                    <button mat-raised-button color="primary" *ngIf=" requestDetails.status == 4 && roleId != 1" > Forwarded </button> &nbsp;&nbsp;
+                    <button mat-raised-button color="primary" *ngIf=" requestDetails.status == 4 && roleId == 1" (click)="approveRequest(requestDetails.id)"> Approve </button> &nbsp;&nbsp;
+                    <button mat-raised-button color="primary" *ngIf=" requestDetails.status == 4 && roleId == 1" (click)="rejectRequest(requestDetails.id)"> Reject </button> &nbsp;&nbsp;
+                    <button mat-raised-button color="warn" [mat-dialog-close]="true">Close</button>
+                </mat-dialog-actions>
+            </div>
+        </form>
+    </section>
+</div>

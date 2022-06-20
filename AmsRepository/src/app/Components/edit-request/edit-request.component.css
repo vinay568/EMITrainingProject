@@ -1,0 +1,26 @@
+.edit{
+    
+    margin-left: 550px;
+
+}
+
+.title{
+    
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.editRequestForm mat-form-field{
+    width: 500px;
+    margin-bottom: 36px;
+}
+
+.editForm {
+    margin-top: 7%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 5%;
+  }
