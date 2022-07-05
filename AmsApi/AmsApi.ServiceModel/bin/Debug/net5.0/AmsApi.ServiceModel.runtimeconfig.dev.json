@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Gopi.Vinay\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Gopi.Vinay\\.nuget\\packages"
+    ]
+  }
+}

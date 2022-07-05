@@ -1,0 +1,14 @@
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\bin\Debug\net5.0\AmsApi.ServiceModel.deps.json
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\bin\Debug\net5.0\AmsApi.ServiceModel.runtimeconfig.json
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\bin\Debug\net5.0\AmsApi.ServiceModel.runtimeconfig.dev.json
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\bin\Debug\net5.0\AmsApi.ServiceModel.dll
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\bin\Debug\net5.0\ref\AmsApi.ServiceModel.dll
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\bin\Debug\net5.0\AmsApi.ServiceModel.pdb
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\obj\Debug\net5.0\AmsApi.ServiceModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\obj\Debug\net5.0\AmsApi.ServiceModel.AssemblyInfoInputs.cache
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\obj\Debug\net5.0\AmsApi.ServiceModel.AssemblyInfo.cs
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\obj\Debug\net5.0\AmsApi.ServiceModel.csproj.CoreCompileInputs.cache
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\obj\Debug\net5.0\AmsApi.ServiceModel.dll
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\obj\Debug\net5.0\ref\AmsApi.ServiceModel.dll
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\obj\Debug\net5.0\AmsApi.ServiceModel.pdb
+C:\Users\Gopi.Vinay\Desktop\Asp.net files\AmsApi\AmsApi.ServiceModel\obj\Debug\net5.0\AmsApi.ServiceModel.genruntimeconfig.cache
