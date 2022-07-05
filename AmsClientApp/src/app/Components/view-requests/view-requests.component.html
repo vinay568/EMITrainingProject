@@ -1,0 +1,80 @@
+<app-navigation-bar></app-navigation-bar>
+
+<div class="myRequests" >
+    <div class="row">
+        <div class="col-md-6 d-flex justify-content-left">
+            <button mat-button matTooltip="Sort Requests" [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item value="1" (click)="getRequestsByStatus(1)">Initiated</button>
+                <button mat-menu-item (click)="getRequestsByStatus(2)">Approved</button>
+                <button mat-menu-item (click)="getRequestsByStatus(3)">Rejected</button>
+                <button mat-menu-item (click)="getRequestsByStatus(4)">Forwarded</button>
+                <button mat-menu-item (click)="getRequestsByStatus(5)">Completed</button>
+            </mat-menu>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end" >
+            <input matInput   
+            id="searchbox"
+            type="text" [(ngModel)]="term" name="term" 
+            placeholder="Enter search key..."><mat-icon class="searchicon">search</mat-icon>
+        </div>    
+    </div>
+  <div *ngIf="isDataLoaded==false">
+      <mat-spinner></mat-spinner>
+  </div>
+    
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" 
+            *ngFor="let data of requests | filter:term | paginate: { itemsPerPage: 4, currentPage: p }">
+            <div class="requestCard">
+                
+                <mat-card>
+                    <mat-card-title style="height: 60px;">
+                        <h2>
+                            REQ{{data.id}}<br>
+                             {{data.purpose}}
+                        </h2>
+                    </mat-card-title>
+                    <mat-card-subtitle style="height: 50px;">
+                        <strong>{{data.description}}</strong>
+                    </mat-card-subtitle>
+                    <mat-card-content >
+                        <strong>Details</strong><br>
+                        
+                        Approver
+                        : {{data.approver}}<br>
+                        Estimated Cost
+                        : {{data.estimatedCost | currency : 'INR'}}<br>
+                        Advance Amount
+                        : {{data.advanceAmount | currency : 'INR'}}<br>
+                        Plan Date
+                        : {{data.planDate | date:'dd-MM-yyyy'}}<br>
+                        <div ngSwitch="{{data.status}}">
+                            <div *ngSwitchCase ="1">Status : <b>Initiated</b></div>
+                            <div *ngSwitchCase="2">Status : <b>Approved</b></div>
+                            <div *ngSwitchCase="3">Status : <b>Rejected</b></div>
+                            <div *ngSwitchCase="4">Status : <b>Forwarded</b></div>
+                            <div *ngSwitchCase="5">Status :<b>Completed</b></div>
+                            
+                        </div>
+                        
+                    </mat-card-content>
+                    <mat-card-footer>
+                        <mat-card-actions>
+                            <button  class="btn btn-info" *ngIf="data.status==1" (click)="editRequest(data.id)">Edit</button>&nbsp;&nbsp;
+                            <button  class="btn btn-danger" *ngIf="data.status==1"
+                            mwlConfirmationPopover
+                            (confirm)="withDraw(data.id)"
+                            (cancel)="cancelClicked=true">WithDraw</button>
+                            <button mat-raised-button class="btn btn-primary" *ngIf="data.status==2" (click)="uploadRequestBill(data.id)">Upload Bill</button>
+                            <button mat-raised-button class="btn btn-primary" *ngIf="data.status==4" > Forwarded </button>
+                            <button mat-raised-button class="btn btn-danger" *ngIf="data.status==3" (click)="viewRejectedReason(data.id)"> Reason </button>
+                        </mat-card-actions>   
+                    </mat-card-footer>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+    <pagination-controls (pageChange)="p = $event" class="paginator d-flex justify-content-center"></pagination-controls>
+</div>
+

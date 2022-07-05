@@ -1,0 +1,64 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="uploadBill">
+    <section >
+       <div class="request-card">
+            
+                    <mat-card class="mat-elevation-z15">
+                        <mat-card-title>
+                            <h2>
+                                REQ{{requestDetails.id}}<br>
+                                {{requestDetails.purpose}}
+                            
+                            </h2>
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{requestDetails.description}}
+                        </mat-card-subtitle>
+                        <mat-card-content>
+                            Approver        : {{requestDetails.approver}}<br>
+                            Estimated Cost  : {{requestDetails.estimatedCost}}<br>
+                            Advance Amount  : {{requestDetails.advanceAmount}}<br>
+                            Plan Date       : {{requestDetails.planDate | date:'dd-MM-yyyy'}}
+                        </mat-card-content>
+                    </mat-card>
+            
+                
+        </div> 
+
+        <div class="uploadBillForm">
+            <form enctype="multipart/form-data" [formGroup]="uploadBillForm" (ngSubmit)="onSubmit()">
+                <h2>
+                    Upload Request Bill
+                </h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <input matInput formControlName="requestid"  placeholder="Request Id" [readonly]="true">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <input matInput formControlName="purpose" placeholder="Purpose" [readonly]="true">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <textarea matInput placeholder="Comments" formControlName="comments"></textarea>
+                        </mat-form-field> 
+                    </div>
+                    <div class="col-md-6">
+                        
+                            <input formControlName="bill" type="file" #billData >
+                        
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center">  
+                    <button mat-raised-button type="submit" [disabled]="uploadBillForm.invalid" color="primary">Submit</button>&nbsp;&nbsp;
+                    <button mat-raised-button color="warn" routerLink="/makeRequest">Cancel</button>
+                </div>
+                
+            </form>
+        </div>
+
+    </section>
+</div>

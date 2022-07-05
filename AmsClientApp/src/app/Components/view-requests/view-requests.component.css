@@ -1,0 +1,41 @@
+.myRequests{
+    border-width: 10px;
+    padding-left: 50px;
+    padding-top: 6%;
+    padding-bottom: 4%;
+    padding-left: 3%;
+    background-image: url("src\assets\images\homePageBg.jpg");
+    background-size: cover;
+}
+
+.myRequests .requestCard{
+    padding-top: 6%;
+    width: 275px;
+    height: 350px;
+    border-color: rgba(0,0,0,0);
+    margin-bottom: 20%;
+    font-style: italic;
+}
+.myRequests .requestCard mat-card-subtitle{
+    font-style: italic;
+    color: crimson;
+}
+
+.myRequests mat-spinner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.myRequests mat-card-actions{
+    padding-left: 20px;
+}
+
+.myRequests pagination-controls{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

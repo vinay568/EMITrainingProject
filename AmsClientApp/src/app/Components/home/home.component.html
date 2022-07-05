@@ -1,0 +1,63 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="request-page">
+  <section class="make-request">
+      <div class="title">
+          <h1>Make Your Request</h1>
+      </div>
+      <form [formGroup]="requestForm"  class="request-form row" (ngSubmit)="onSubmit(requestForm.value)">
+          <div class="row">
+            <div class="form-field col-md-6">
+              <mat-form-field>
+                  <mat-label class="label" for="purpose">Purpose</mat-label>
+                  <input matInput class="input-text js-input" type="text" id="purpose" 
+                  formControlName="purpose" >
+              </mat-form-field>
+            </div>
+            <div class="form-field col-md-6">
+              <mat-form-field>
+                  <mat-label class="label" for="approver">Approver</mat-label>
+                  <mat-select [(value)]="approver" class="input-text js-input" formControlName="approver">
+                      <mat-option  value="{{approver}}">{{approver}}</mat-option>
+                  </mat-select>
+              </mat-form-field>
+            </div>
+            <div class=" form-field col-md-6">
+              <mat-form-field>
+                  <mat-label class="label" for="estimatedCost">Estimated Amount</mat-label>
+                  <input matInput class="input-text js-input" type="number" id="estimatedCost" formControlName="estimatedCost">
+              </mat-form-field>
+            </div>
+            <div class="form-field col-md-6">
+              <mat-form-field>
+                  <mat-label class="label" for="advanceAmount">Advance Amount</mat-label>
+                  <input matInput class="input-text js-input" type="number" id="advanceAmount" formControlName="advanceAmount">
+              </mat-form-field>
+            </div>
+            <div class="form-field col-md-6">
+              <mat-form-field>
+                  <mat-label class="label" for="description">Description</mat-label>
+                  <textarea matInput  type="text" id="description" formControlName="description" ></textarea>
+              </mat-form-field>
+              
+            </div>
+            <div class="form-field col-md-6">
+              <mat-form-field>
+                  <mat-label class="label" for="date">Plan Date</mat-label>
+                  <input matInput class="input-text js-input" type="date" id="date" formControlName="planDate">
+                  
+              </mat-form-field>
+            </div>
+          
+          
+            <div class="form-field col-md-6 ">
+                <div class="col-md-offset-3">
+                    <button mat-raised-button class="submit-btn"  type="submit" color="accent">Submit</button> &nbsp;&nbsp;
+                    <button mat-raised-button class="submit-btn" type="reset" color="accent" (click)="requestForm.reset()">Clear</button>
+                </div>
+            </div>
+           
+        </div>
+      </form>
+      
+  </section>
+</div>

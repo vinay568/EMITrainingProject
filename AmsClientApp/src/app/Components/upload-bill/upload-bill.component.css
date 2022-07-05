@@ -1,0 +1,39 @@
+.uploadBill{
+    border-width: 10px;
+    padding-left: 50px;
+    background-color: bisque;
+    padding-top: 6%;
+    padding-bottom: 4%;
+}
+
+
+
+.request-card {
+    padding : 16px;
+    width: 30%;
+    float: left;
+    
+}
+
+.uploadBillForm{
+    padding : 16px;
+    width: 50%;
+    float: right;
+    padding-right: 9.5%;
+}
+
+.uploadBillForm form{
+    background-color:cornsilk;
+}
+
+.uploadBillForm mat-form-field{
+    padding-left: 16px;
+}
+.uploadBillForm h2{
+    padding-left: 175px;
+}
+
+
+.uploadBillForm mat-form-field textarea{
+    width: 100%;
+}
