@@ -11,7 +11,7 @@ namespace AmsApi.DataModel.Helpers
     {
         public static string EmailNotification(string fromAddress, string toAddress)
         {
-            MailMessage message = new MailMessage("gopivinay3012@gmail.com", "gopi.vinay@euromonitor.com");
+            MailMessage message = new MailMessage("sender@gmail.com", "receiver@gmail.com");
             message.Subject = "New request from employee";
             message.Body = "You have request for approval";
 
@@ -22,8 +22,8 @@ namespace AmsApi.DataModel.Helpers
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
 
             System.Net.NetworkCredential credential = new System.Net.NetworkCredential();
-            credential.UserName = "gopivinay3012@gmail.com";
-            credential.Password = "yuwvyubsrcgpsefs";
+            credential.UserName = "sender@gmail.com";
+            credential.Password = "password encoded";
             smtp.UseDefaultCredentials = false;
             smtp.Credentials = credential;
 
